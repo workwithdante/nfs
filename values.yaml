@@ -1,13 +1,20 @@
 nfs-server:
   persistence:
-    enabled: true
-    accessMode: ReadWriteMany
-    size: 8Gi
-    storageClass:
-      create: true
-      name: in-cluster-nfs
-      defaultClass: true
-      allowVolumeExpansion: true
-      reclaimPolicy: Retain
-      mountOptions:
-        - vers=4.1
+    shared:
+      enabled: true
+      type: pvc              # <-- de emptyDir a PVC
+      mountPath: /shared
+
+      # nuevo: petición de tamaño y modo de acceso
+      size: 8Gi
+      accessMode: ReadWriteMany
+
+      # nuevo: configuración del StorageClass
+      storageClass:
+        create: true               # que el chart lo cree
+        name: in-cluster-nfs       # nombre del SC
+        defaultClass: true         # que sea el SC por defecto
+        allowVolumeExpansion: true # permite luego ampliar el PVC
+        reclaimPolicy: Retain      # retiene el PV tras borrar el PVC
+        mountOptions:
+          - vers=4.1               # tu opción NFS
