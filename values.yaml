@@ -1,4 +1,7 @@
 nfs-server:
+  udp:
+      enabled: false
+      
   storageClass:
     create: true
     name: in-cluster-nfs
