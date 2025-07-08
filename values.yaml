@@ -1,5 +1,8 @@
-nfs-server:
-  main:
-      type: ClusterIP
-  udp:
-      enabled: false
+nfs-server-provisioner:
+  storageClass:
+    mountOptions:
+      - vers=4.1
+
+  persistence:
+    enable: true
+    size: 8Gi
