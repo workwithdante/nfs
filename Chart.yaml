@@ -5,6 +5,6 @@ type: application
 version: 0.1.0
 
 dependencies:
-  - name: nfs-server
+  - name: obeone/nfs-server
     version: "1.1.3"  # Especifica la versión del chart de gitea que deseas usar
     repository: "https://charts.obeone.cloud"  # URL del repositorio de gitea
