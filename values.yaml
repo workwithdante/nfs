@@ -17,7 +17,7 @@ nfs-server:
     shared:
       enabled: true
       type: pvc
-      mountPath: /shared
       size: 8Gi
       accessMode: ReadWriteMany
       storageClass: in-cluster-nfs
+      mountPath: /shared
