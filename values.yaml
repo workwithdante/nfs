@@ -3,7 +3,6 @@ nfs-server:
     enabled: true
     accessMode: ReadWriteMany
     size: 8Gi
-
     storageClass:
       create: true
       name: in-cluster-nfs
