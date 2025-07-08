@@ -1,13 +1,14 @@
-persistence:
-  enabled: true
-  accessMode: ReadWriteMany
-  size: 8Gi
+nfs-server:
+  persistence:
+    enabled: true
+    accessMode: ReadWriteMany
+    size: 8Gi
 
-  storageClass:
-    create: true
-    name: in-cluster-nfs
-    defaultClass: true
-    allowVolumeExpansion: true
-    reclaimPolicy: Retain
-    mountOptions:
-      - vers=4.1
+    storageClass:
+      create: true
+      name: in-cluster-nfs
+      defaultClass: true
+      allowVolumeExpansion: true
+      reclaimPolicy: Retain
+      mountOptions:
+        - vers=4.1
