@@ -3,21 +3,3 @@ nfs-server:
       type: ClusterIP
   udp:
       enabled: false
-
-  storageClass:
-    create: true
-    name: in-cluster-nfs
-    defaultClass: true
-    allowVolumeExpansion: true
-    reclaimPolicy: Retain
-    mountOptions:
-      - vers=4.1
-
-  persistence:
-    shared:
-      enabled: true
-      type: pvc
-      size: 8Gi
-      accessMode: ReadWriteMany
-      storageClass: in-cluster-nfs
-      mountPath: /shared
