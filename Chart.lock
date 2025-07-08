@@ -1,6 +1,0 @@
-dependencies:
-- name: nfs-server
-  repository: https://charts.obeone.cloud
-  version: 1.1.2
-digest: sha256:dd9149f9a762ec2838b6d5237dbe2ec21fc15c7a180594a4bd073f39f479fd84
-generated: "2025-07-08T12:12:52.816460694-05:00"
