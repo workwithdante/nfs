@@ -1,0 +1,10 @@
+apiVersion: v2
+name: nfs-sierra-group
+description: Wrapper chart for NFS Server
+type: application
+version: 0.1.0
+
+dependencies:
+  - name: nfs-server
+    version: "12.1.1"  # Especifica la versión del chart de gitea que deseas usar
+    repository: "https://charts.obeone.cloud"  # URL del repositorio de gitea
